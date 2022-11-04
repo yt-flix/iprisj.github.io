@@ -18,76 +18,77 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link rel="stylesheet" href="https://prisj.cc/src/style.css" />
+        <link rel="stylesheet" href="./src/style.css" />
     </head>
     <body>
-                    <div class="header">
-                <a href="https://discord.com/users/937190649726378054" class="discordProfile">
-                    <iframe height="218px" width="410px" scrolling="no" src="https://lanyard.cnrad.dev/api/937190649726378054?borderRadius=50px&idleMessage=No%20Current%20Status&bg=a&animated=true" frameborder="0" id="iframe"></iframe>
-                    <script>
-                        window.setInterval(function() {
-                            document.getElementById('iframe').src = document.getElementById('iframe').src
-                        }, 8000);
-                    </script>
+        <div class="header">
+            <a href="https://discord.com/users/937190649726378054" class="discordProfile">
+                <iframe height="218px" width="410px" scrolling="no" src="https://lanyard.cnrad.dev/api/937190649726378054?borderRadius=50px&idleMessage=No%20Current%20Status&bg=a&animated=true" frameborder="0" id="iframe"></iframe>
+                <script>
+                    window.setInterval(function() {
+                        document.getElementById('iframe').src = document.getElementById('iframe').src
+                    }, 8000);
+                </script>
+            </a>
+            <div class="icons">
+                <a href="https://discord.com/users/937190649726378054" target="_blank">
+                    <i class="fab fa-discord"></i>
                 </a>
-                <div class="icons">
-                    <a href="https://discord.com/users/937190649726378054" target="_blank">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                    <a href="https://t.me/imprisj" target="_blank">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                    <a href="https://github.com/iprisj" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-		    </a>
-			<a href="https://steamcommunity.com/id/prisj/" target="_blank">
-                        <i class="fab fa-steam"></i>
-                    </a>
-                    <a href="https://twitter.com/iprisj" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-			<a href="https://cash.app/$iprisj" target="_blank">
-                        <i class="fa fa-dollar"></i>
-                    </a>
-                </div>
+                <a href="https://t.me/imprisj" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://github.com/iprisj" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                </a>
+                <a href="https://steamcommunity.com/id/prisj/" target="_blank">
+                    <i class="fab fa-steam"></i>
+                </a>
+                <a href="https://twitter.com/iprisj" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://cash.app/$iprisj" target="_blank">
+                    <i class="fa fa-dollar"></i>
+                </a>
+            </div>
+        </div>
 
 <h1>Donate</h1>
 (pls thx)
 
 <div>
 <a href="https://cash.app/$iprisj" target="_blank" >Cashapp: $iprisj</a>
-<button onclick="copyCashapp()">Copy Cashapp</button>
+<button onclick="copy('$iprisj')">Copy Cashapp</button>
 </div>
 
 <div>
 BTC: bc1qlexrhasjtz2ehytz8ltyh40makyqhfla92qk82
-<button onclick="copyBTC()">Copy BTC Address</button>
+<button onclick="copy('bc1qlexrhasjtz2ehytz8ltyh40makyqhfla92qk82')">Copy BTC Address</button>
 </div>
 
 <div>
 XMR: 48XQ8sERmQnBNVhbyBSyCu9T1xCrUvcgxjZRYJYsff71S9QNWJLbX7yWJGKihJQyyzFLzWaWW3x43FWP4YBff7HLMwoakoy
-<button onclick="copyXMR()">Copy XMR Address</button>
+<button onclick="copy('48XQ8sERmQnBNVhbyBSyCu9T1xCrUvcgxjZRYJYsff71S9QNWJLbX7yWJGKihJQyyzFLzWaWW3x43FWP4YBff7HLMwoakoy')">Copy XMR Address</button>
 </div>
 
 <div>
 ETH: 0x627D74A6E7771BbE0EE14110355BcF26f6637654
-<button onclick="copyETH()">Copy ETH Address</button>
+<button onclick="copy('0x627D74A6E7771BbE0EE14110355BcF26f6637654')">Copy ETH Address</button>
 </div>
 
 <div>
 LTC: LgLZtMBTAu4Xi2ZjmYu4zvoGhfis6rN1fd
-<button onclick="copyLTC()">Copy LTC Address</button>
+<button onclick="copy('LgLZtMBTAu4Xi2ZjmYu4zvoGhfis6rN1fd')">Copy LTC Address</button>
 </div>
 
 <div>
 BCH: qrdm3j420zxnqdx6wuu5g6wlczf90pexw5ah8zdf2e
-<button onclick="copyBCH()">Copy BCH Address</button>
+<button onclick="copy('qrdm3j420zxnqdx6wuu5g6wlczf90pexw5ah8zdf2e')">Copy BCH Address</button>
 </div>
 
 <div>
 DOGE: D9SpX2HsgixEsBBkfcPMdnKG1h9oxhPaaw
-<button onclick="copyDOGE()">Copy DOGE Address</button>
+<button onclick="copy('D9SpX2HsgixEsBBkfcPMdnKG1h9oxhPaaw')">Copy DOGE Address</button>
 </div>
 
 
@@ -98,48 +99,12 @@ DOGE: D9SpX2HsgixEsBBkfcPMdnKG1h9oxhPaaw
 
 
 <script>
-function copyCashapp() {
-	var x = "$iprisj"
-	navigator.clipboard.writeText(x);
-	alert("Copied the text: " + x);
+function copy(textToCopy) {
+    navigator.clipboard.writeText(textToCopy);
+    alert("Copied the text: " + textToCopy);
 }
-function copyBTC() {
-	var x = "bc1qlexrhasjtz2ehytz8ltyh40makyqhfla92qk82"
-	navigator.clipboard.writeText(x);
-	alert("Copied the text: " + x);
-}
-function copyXMR() {
-	var x = "48XQ8sERmQnBNVhbyBSyCu9T1xCrUvcgxjZRYJYsff71S9QNWJLbX7yWJGKihJQyyzFLzWaWW3x43FWP4YBff7HLMwoakoy"
-	navigator.clipboard.writeText(x);
-	alert("Copied the text: " + x);
-}
-function copyETH() {
-	var x = "0x627D74A6E7771BbE0EE14110355BcF26f6637654"
-	navigator.clipboard.writeText(x);
-	alert("Copied the text: " + x);
-}
-function copyLTC() {
-	var x = "LgLZtMBTAu4Xi2ZjmYu4zvoGhfis6rN1fd"
-	navigator.clipboard.writeText(x);
-	alert("Copied the text: " + x);
-}
-function copyBCH() {
-	var x = "qrdm3j420zxnqdx6wuu5g6wlczf90pexw5ah8zdf2e"
-	navigator.clipboard.writeText(x);
-	alert("Copied the text: " + x);
-}
-function copyDOGE() {
-	var x = "D9SpX2HsgixEsBBkfcPMdnKG1h9oxhPaaw"
-	navigator.clipboard.writeText(x);
-	alert("Copied the text: " + x);
-}
-
-
-
 
 </script>
-
-
 		</div>
         </main>
     </body>
